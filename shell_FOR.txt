@@ -1,0 +1,47 @@
+for i in {1..10..2} #It means{Start..End..Increement}   #work in version gt than 4.3 
+do 
+echo $i
+done 
+
+
+
+for (( i=0; i<5: i++ ))
+do 
+echo $i
+done 
+
+
+
+
+for i in ls pwd date
+do 
+echo $i
+done 
+
+
+
+for i in *
+do 
+	if [ -d $i ]
+	 then
+	  echo $i
+	fi  
+done 
+
+for (( i=0; i<5: i++ ))
+do 
+if [ $i -gt 3 ]
+then
+	continue
+fi	
+echo "$i"
+done 
+
+for (( i=0; i<5: i++ ))
+do 
+if [ $i -eq 3 -o $i -eq 1 ]
+then
+	continue
+fi	
+echo "$i"
+done 

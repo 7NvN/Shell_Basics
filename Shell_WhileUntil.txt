@@ -1,0 +1,43 @@
+Array:
+
+os=('Ubuntu' 'Linux' 'MAc')
+os[6]='Windows'
+
+unset os[2]
+echo "${os[@]}"
+echo "${os[1]}"
+echo "${!os[@]}"  : array index
+echo "${#os[@]}"  : count of array elements
+
+WHILE:
+
+n=1
+while  (( $n <= 10 ))    or  [ $n -le 10 ]
+do 
+	echo "$n"
+	(( ++n ))     		or n =$(( n+1 ))     or   (( n++  	))
+     sleep 2 #it will print every value after 2 sec  
+done
+
+READ FILE LINE BY LINE IN SHELL:
+
+while read line 
+do 
+	echo "$line"
+done < filename.txt	#or done < /path/filename.txt
+	
+cat filename.txt | while read line 
+do 
+	echo "$line"
+done
+
+UNTIL:
+
+
+n=1
+until  (( $n >= 10 ))    or  [ $n -gt 10 ]
+do 
+	echo "$n"
+	(( ++n ))     		or n =$(( n+1 ))     or   (( n++  	))
+     sleep 2 #it will print every value after 2 sec  
+done

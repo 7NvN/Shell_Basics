@@ -1,0 +1,31 @@
+read -e "filename : \c" 
+enable the interpretation of \c 
+if [ -e $filename ]
+then
+   echo "$filename found"
+else 
+	echo "$filename not found"
+fi 
+
+if [ -f $filename ] : chck for regular filename
+if [ -d $filename ] : check for directory
+if [ -c $filename ] : check for normal filename
+if [ -b $filename ] : check for block file(audio, video)
+if [ -s $filename ] : check for empty file
+if [ -r/w/x $filename ] : chck for permissions
+WAP to append data to file
+
+if [ -f $filename ] 
+then
+	if [ -w $filename ]
+	then
+	  echo "Type some data, for exit ctrl+d press"
+	  cat >> $filename
+	else
+	  echo"File have no permissions"
+	fi
+else
+		echo "$filename not exists"
+	
+
+ 

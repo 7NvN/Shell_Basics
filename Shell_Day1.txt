@@ -1,0 +1,40 @@
+shell scripts are interpreted not compiled
+bash shell bourne again shell (improved version of sh): which bash : give path of bash shell
+Comments and variables
+Variables
+1.system var : defined by system generally in upper case
+2.user variable 
+
+read command : for user input
+eg : read name1 name2 name3
+read -p  : to prompt the cursor on same line
+read -sp : to enter password or hide the characters while writing
+read -a name : for array 
+echo "${name[1]} ${name[2]}"
+read : without any vraiable than it will save in default variable : $REPLY
+echo $REPLY
+COMMAND LINE ARGUMENT :
+
+$@ : args value passed in runtime
+$# : return no. of args
+
+IF : Number comparision
+
+-eq - is equal to - if [ "$a" -eq "$b" ] 
+-ne - is not equal to - if [ "$a" -ne "$b" ] 
+-gt - is greater than - if [ "$a" -gt "$b" ] 
+-ge - is greater than or equal to - if [ "$a" -ge "$b" ] 
+-lt - is less than - if [ "$a" -lt "$b" ] 
+-le - is less than or equal to - if [ "$a" -le "$b" ] 
+< - is less than - (("$a" < "$b")) 
+<= - is less than or equal to - (("$a" <= "$b")) 
+> - is greater than - (("$a" > "$b"))
+>= - is greater than or equal to - (("$a" >= "$b"))
+
+STRING:
+= - is equal to - if [ "$a" = "$b" ] 
+== - is equal to - if [ "$a" == "$b" ] 
+!= - is not equal to - if [ "$a" != "$b" ] 
+< - is less than, in ASCII alphabetical order - if [[ "$a" < "$b" ]]
+> - is greater than, in ASCII alphabetical order - if [[ "$a" > "$b" ]]
+-z - string is null, that is, has zero length

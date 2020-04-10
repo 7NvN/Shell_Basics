@@ -1,0 +1,80 @@
+SELECT statement : when we use data like menu type structure.
+
+select car in BMW merc Buggati Hyundai
+do 
+	#echo "@car is selected"
+	#for CASE
+	case $car in
+		BMW)
+		echo BMW is selected 
+		;;
+		merc)
+		echo BMW is selected 
+		;;
+		Buggati)
+		echo BMW is selected 
+		;;
+		Hyundai)
+		echo BMW is selected 
+		;;		
+		*)
+		echo "Default Maruti 800" ;;
+	esac
+done
+
+FUNCTION : code block implements set of operations
+
+function print(){
+echo $1 $2 $3
+}
+
+quit(){
+exit
+}
+
+print Hello World
+print Again
+echo "It's working"
+quit
+
+
+
+function print(){
+
+name = $2
+echo $1 $2 $3 $4
+echo "My  name is $name"
+}
+
+quit(){
+exit
+}
+name=Keith
+echo "My name is $name"
+print Hello Josh
+print Again 
+print BMW
+echo My name is $name"
+echo "It's working"
+quit
+
+
+
+function print(){
+
+local name = $2 # so that it will be local not effect global data
+echo $1 $2 $3 $4
+echo "My  name is $name"
+}
+
+quit(){
+exit
+}
+name=Keith
+echo "My name is $name"
+print Hello Josh
+print Again 
+print BMW
+echo My name is $name"
+echo "It's working"
+quit

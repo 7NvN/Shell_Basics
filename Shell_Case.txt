@@ -1,0 +1,31 @@
+CASE statement:
+
+Company=$1
+
+case $Company in
+		"Ferrari" )
+		echo "$Company is of car" ;;
+		"Amdocs" )
+		echo "$Company is IT Company" ;;
+		"Porsche" )
+		echo "$Company is of car Company" ;;
+		* )
+		echo "Unknown Company" ;;
+esac		
+eg : in case of regular expression
+
+Company=$1
+echo -e ("Enter only 1 character : \c"
+read value
+case $value in
+		[a-z] )
+		echo "$value is small alphabet" ;;
+		[A-Z] )
+		echo "$value is Big alphabet" ;;				(in case BIG case will not work properly than type command LANG=C, it should work)
+		[0-9] )
+		echo "$value is numeric value" ;;
+		 ? )
+		 echo "$value is special character" ;;
+		* )
+		echo "It's not a single character" ;;
+esac		

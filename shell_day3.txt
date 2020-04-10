@@ -1,0 +1,33 @@
+And Operator
+if [ "$val" -gt 25 ] && [ "$val" -lt 50 ]
+if [ "$val" -gt 20 -a "$val" -lt 50 ]
+if [[ "$val" -gt 25 && "$val" -lt 50 ]]
+
+OR operator :  
+need to replace && --> ||
+need to replace -a --> -o
+
+Arithematic operator:
+
+echo $(( n1 + n2 ))
+echo $(( n1 - n2 ))
+echo $(( n1 * n2 ))
+echo $(( n1 / n2 ))
+
+echo $(expr $n1 + $n2 ))
+echo $(expr $n1 - $n2 ))
+echo $(expr $n1 \* $n2 ))   : as expr don't take * as operatoins
+echo $(expr $n1 / $n2 ))
+
+Floating point operations
+n1=20.5
+n2=3.8
+bc:basic calculation
+echo "$20.5+3.8" | bc
+echo "$n1+$n2" | bc
+echo "$n1-$n2" | bc
+echo "$n1*$n2" | bc
+echo "scale=2;$n1/$n2" | bc (as for division we need to include scale to decimal values evrytime
+
+echo "scale=2;sqrt($n1)" | bc -l    (-l to invoke sqrt method from math library) 
+echo "scale=2;3^3" | bc -l 

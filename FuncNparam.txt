@@ -1,0 +1,37 @@
+usage(){
+echo "PLease run script with file as argument"
+echo "with $0 script"
+}
+
+is_file_exist(){
+local file="$1"
+[[ -f "$file" ]] && return 0 || return 1
+}
+
+[[ $# -eq 0 ]] && usage
+if( is_file_exist "$1" )
+then
+	echo "File found"
+else
+	echo "File not found"
+fi 
+
+READONLY : variable and function will be read only no change can be done later
+
+var = 50
+readonly var
+var=55
+
+Hello(){
+echo "hello world"}
+
+readonly Hello()
+
+
+Hello(){
+echo "hello world"}
+
+readonly 
+readonly -p
+readonly -f
+

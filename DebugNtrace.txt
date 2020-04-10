@@ -1,0 +1,43 @@
+echo "PID : $$"
+while (( count < 10 ))
+do 
+	sleep 10
+	(( count++ ))
+	echo $count 
+done
+exit 0
+
+
+ctrl+c:inteerupt signal
+trl+z:suspend signal
+kill -9 : kill sig  #terminate completely
+
+man 7 signal: to read on signals
+
+trap "echo Exit signal is detected" SIGKILL   #SIGINT 9 
+#SIGKILL SIGSTOP are exception to trap
+
+
+file=$1
+trap "rm -f $file  &&  echo file deleted; exit" 0 2 15  
+
+echo "PID : $$"
+while (( count < 10 ))
+do 
+	sleep 10
+	(( count++ ))
+	echo $count 
+done
+exit 0
+
+#trap : use to show all traps
+remove trap : trap - 0 2 15
+
+DEBUG in shell:
+bash -x scriptname
+
+#! /bin/bash -x
+
+set -x
+#content that needs to be debug
+set +x
